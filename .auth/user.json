@@ -2,7 +2,7 @@
   "cookies": [
     {
       "name": "AUTH_SESSION_ID",
-      "value": "ef920f8e-48aa-4a93-8f72-3f1ec9b6d02f.keycloak-0-58591",
+      "value": "e359d8a3-8672-4cc3-b8a5-c6dc35f528d9.keycloak-0-58591",
       "domain": "keycloak.dev-asoc.moscow.alfaintra.net",
       "path": "/realms/ASOC-DEV/",
       "expires": -1,
@@ -12,7 +12,7 @@
     },
     {
       "name": "AUTH_SESSION_ID_LEGACY",
-      "value": "ef920f8e-48aa-4a93-8f72-3f1ec9b6d02f.keycloak-0-58591",
+      "value": "e359d8a3-8672-4cc3-b8a5-c6dc35f528d9.keycloak-0-58591",
       "domain": "keycloak.dev-asoc.moscow.alfaintra.net",
       "path": "/realms/ASOC-DEV/",
       "expires": -1,
@@ -22,7 +22,7 @@
     },
     {
       "name": "KC_RESTART",
-      "value": "eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..0neblogainRxLdW1TrpoZw.fYZP0EzdLB5PDV789ejvHmHajGNWG8bFYCrta1RP62SBYgg6V7gDcLeq8kiz0yF_V6qtHT0HQKC1deld_OZZMIRORRozXMhR9yQyQLFGzC463ETk-AjwWXNIZmtkQa5q8u8C4NOaaskS8n_cy5vqNjfHbqza80BijqC7-xRrvjtLFgvTyz1dVRtmsI6RAIT_ko_uYNdO8BI4Hz8vG_sEIfvoht8IgKabJpcIbyxl9Rp7PFoO09mgq0Y_qE6zPX76ZHK2HCiC6lcvDaVKzJnW5xITySBMLPFaY6WFXB-xz3HIags1LVRI1QxWh1vIT0p-GoDdFLrWQwZSxtOEHywpBeu2wEIklE1ColPVIdgsQ0bKF74JlVXVwFnzGZAPqoJwskD444H07hFAN6kxM2OAw-Ppj4BZ-Y2V8a2khvTN8LG0qv_j5REAZYLvOP9wtYHeX2Q5BhJlqLmOrwo-b5kxVuSpBOOGulXgGywGVg3IaI2_7l2b1ZWHoMI4hxJAlkWzVU49RkG9OfwUDpqX77qYD_Pbd5aiEgHzjEx9S8n0b6i3FvXBjtb2QNbXZxicmSPtcyUSt7tmFly5wEL9OqMUGn0YQMnLUNlXtgNnjnYcJILfGnCE9hKiU6t4qloj5UNq048Ulosc-HOx5Jg2XgSpB0r-WLUnTRrTt7pYFPhf5T8mMn5HJvuFOPncbAiVu14C4dCczf_i232jh1i_AzwlANKdg0KkIwGPfVp1Hcn6UrzQ7c2VteYn6_IiQQ-WnHIQMyMfPsfOE2WebkFrHwNKQUppgkfAU2nF_pssoss7XmpqrpVbN7KWieIHaaInjAbs34FGO4X77Tqxrd90hcgl-188FMIopgP5phlQa8FL8-ISUjDFQ-J3Vmcmd8Un1RVbfQb-DM7jelrd-eXr8UdnJTPD1-2vvLQc8Qp-pkJpbn0VbO0uUkBNrfdgGUILu5oUOlG4PpVnjVdg05-tYeTs3XJtaUdEiRiTSWzdphzQ2ErqGp5Sbg41PSGvzdtyObT7xDmj_KpkRAkD__K_JlZHng._fZyj85o5Pvon3FR6s5jbw",
+      "value": "eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..lLxb--RZX2JFVuBoE7mICA.786l9IV2SN97rqfbJ6_XkTatRziIXTmnhlisxA7rhIhfwgZt-I-RoTwOesokpzQnt_qSImnXCwRCalbvl4uvHEzrICx_NVXUz69eQKDEsD4wEXWav5qrZ9H1ZkBPwonqJoZ-Pjl2q88JvHH-90ADWzi-_LJvp4iQMA4VZzEL1fNeG8wr5y5WHol7vRCP5tgQehBagG_t6lm4CJKGMxrarX4absFVZ2UcjaWsPHc4sQCE9SEVa1cLGqjPvAG4fTfgpWFMWO73aPUPyF8vDjs4uiL5-NLwHAOEeg5eYaA4NhZTPvpHQ6y-TTrO9CUx4vLQcHaQRCrR5pnz6LKAZ_LawyD87DVnRNRum17u95yOfpqYrz0wWWFwXkiN1FMN8PNauaJVMWJRihhkRjf09pTY-0t4SYE5B4eXVUcSWbZqmPCTup4YwFTw_-n6nUs1AfcvpJEABW6thmWMRzbKCr4xfsOXqNhYjiMqxEb4XzNM7azBZr61ZvR426aQhKbzOJTqDeKLcV8Xnpg-odZkMrNs35YZi5hI0Txg2XREzRQ1LA_HJbs_ta6uG7PhS8-O_GFrXz6D3TMgBaOHHmdIGbtiJU3D5Y4_HrntwbtzR5Jutep6r_oCOwsHv7CjpDI2h09LHnKae_jPxThN_xA3UxFWmxU51CpRYGFQafLrlRQp0x7USxRZWMKNC7ObZi2aq06Uh8PEst28wnA8RZsoPELOphfwXOX-am1df8-9u3iMYJ8xgLgvH7OMyE-vFzDbU9yBpiu8e_K_u1ZnGw2YzN-Nxvi-J-aJ7JRN5lsbr97mq3HJ6HOE9UE9fMxPN9OtEXYAZBeAa9MSIAhXgiMKJpM5SiV1hzsDjqIo9lP9aXPb4tJWN8uzf6R43VMd2NvBy0hPAsHx991Es7DckFvGHsSLYjkCZKbzojs0DJNbEX0Ycuy9PN0sHdW-oISgBzOS04urRuL2orLiLll1yrr5iSvKFsVNJma0yjrx_zIWG0-EuONS6_6crfQKtJCZkaIPWZKBZsGvwFpMlctuBhtpurElig.2bJloBcn2pNZ3hHKR45v2Q",
       "domain": "keycloak.dev-asoc.moscow.alfaintra.net",
       "path": "/realms/ASOC-DEV/",
       "expires": -1,
@@ -32,7 +32,7 @@
     },
     {
       "name": "KEYCLOAK_IDENTITY",
-      "value": "eyJhbGciOiJIUzUxMiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI2YTNhYmVlZS1mOWFkLTRkOTktYjNiMC0wZGI1NmE0YTY3ZDAifQ.eyJleHAiOjE3NTc0OTEzNDgsImlhdCI6MTc1NzQ1NTM0OCwianRpIjoiNDc2Y2VjNDItMDUzOS00MDIzLWJlMjAtYmZlYmIzMjU4Nzk1IiwiaXNzIjoiaHR0cHM6Ly9rZXljbG9hay5kZXYtYXNvYy5tb3Njb3cuYWxmYWludHJhLm5ldC9yZWFsbXMvQVNPQy1ERVYiLCJzdWIiOiI3ZTA1YWFiYS0wYzFiLTQ5MTgtYjU5Ny01YjY4Yjg3NzY4M2QiLCJ0eXAiOiJTZXJpYWxpemVkLUlEIiwic2lkIjoiZWY5MjBmOGUtNDhhYS00YTkzLThmNzItM2YxZWM5YjZkMDJmIiwic3RhdGVfY2hlY2tlciI6Imc4a0o5OHZsYTN5M3hxcVU3M3ZRMXVkSHhzQTVhQnFHM3FjZTc1MnJ2QUEifQ.UBKrzNM-XEab5YbLZo6etL2zvmPJlwwmZkusSyLsdqPtwIXWhvmH8DPfQ5Y9k9tHbA-UhPlLhJ6ULg25PHff7w",
+      "value": "eyJhbGciOiJIUzUxMiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI2YTNhYmVlZS1mOWFkLTRkOTktYjNiMC0wZGI1NmE0YTY3ZDAifQ.eyJleHAiOjE3NTc1MjI5MzIsImlhdCI6MTc1NzQ4NjkzMiwianRpIjoiZjkzMzU3OWUtNTJhNS00NDgyLWFkOTMtMTdhMjlmNDNmZmU2IiwiaXNzIjoiaHR0cHM6Ly9rZXljbG9hay5kZXYtYXNvYy5tb3Njb3cuYWxmYWludHJhLm5ldC9yZWFsbXMvQVNPQy1ERVYiLCJzdWIiOiI3ZTA1YWFiYS0wYzFiLTQ5MTgtYjU5Ny01YjY4Yjg3NzY4M2QiLCJ0eXAiOiJTZXJpYWxpemVkLUlEIiwic2lkIjoiZTM1OWQ4YTMtODY3Mi00Y2MzLWI4YTUtYzZkYzM1ZjUyOGQ5Iiwic3RhdGVfY2hlY2tlciI6IjczTVd5dzZ2eUdpRC00S20tM21JV2diZnI4alNRU3hnQ05qMXNwUVlSSVUifQ.QP6jdZ7HVFwWexRAwdja5iI3h2ncK2JazbDbjb6kRslN5hvK2E5yeGsQAQMm4q0TPHPZPMPKofwjDLYS10Qixw",
       "domain": "keycloak.dev-asoc.moscow.alfaintra.net",
       "path": "/realms/ASOC-DEV/",
       "expires": -1,
@@ -42,7 +42,7 @@
     },
     {
       "name": "KEYCLOAK_IDENTITY_LEGACY",
-      "value": "eyJhbGciOiJIUzUxMiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI2YTNhYmVlZS1mOWFkLTRkOTktYjNiMC0wZGI1NmE0YTY3ZDAifQ.eyJleHAiOjE3NTc0OTEzNDgsImlhdCI6MTc1NzQ1NTM0OCwianRpIjoiNDc2Y2VjNDItMDUzOS00MDIzLWJlMjAtYmZlYmIzMjU4Nzk1IiwiaXNzIjoiaHR0cHM6Ly9rZXljbG9hay5kZXYtYXNvYy5tb3Njb3cuYWxmYWludHJhLm5ldC9yZWFsbXMvQVNPQy1ERVYiLCJzdWIiOiI3ZTA1YWFiYS0wYzFiLTQ5MTgtYjU5Ny01YjY4Yjg3NzY4M2QiLCJ0eXAiOiJTZXJpYWxpemVkLUlEIiwic2lkIjoiZWY5MjBmOGUtNDhhYS00YTkzLThmNzItM2YxZWM5YjZkMDJmIiwic3RhdGVfY2hlY2tlciI6Imc4a0o5OHZsYTN5M3hxcVU3M3ZRMXVkSHhzQTVhQnFHM3FjZTc1MnJ2QUEifQ.UBKrzNM-XEab5YbLZo6etL2zvmPJlwwmZkusSyLsdqPtwIXWhvmH8DPfQ5Y9k9tHbA-UhPlLhJ6ULg25PHff7w",
+      "value": "eyJhbGciOiJIUzUxMiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI2YTNhYmVlZS1mOWFkLTRkOTktYjNiMC0wZGI1NmE0YTY3ZDAifQ.eyJleHAiOjE3NTc1MjI5MzIsImlhdCI6MTc1NzQ4NjkzMiwianRpIjoiZjkzMzU3OWUtNTJhNS00NDgyLWFkOTMtMTdhMjlmNDNmZmU2IiwiaXNzIjoiaHR0cHM6Ly9rZXljbG9hay5kZXYtYXNvYy5tb3Njb3cuYWxmYWludHJhLm5ldC9yZWFsbXMvQVNPQy1ERVYiLCJzdWIiOiI3ZTA1YWFiYS0wYzFiLTQ5MTgtYjU5Ny01YjY4Yjg3NzY4M2QiLCJ0eXAiOiJTZXJpYWxpemVkLUlEIiwic2lkIjoiZTM1OWQ4YTMtODY3Mi00Y2MzLWI4YTUtYzZkYzM1ZjUyOGQ5Iiwic3RhdGVfY2hlY2tlciI6IjczTVd5dzZ2eUdpRC00S20tM21JV2diZnI4alNRU3hnQ05qMXNwUVlSSVUifQ.QP6jdZ7HVFwWexRAwdja5iI3h2ncK2JazbDbjb6kRslN5hvK2E5yeGsQAQMm4q0TPHPZPMPKofwjDLYS10Qixw",
       "domain": "keycloak.dev-asoc.moscow.alfaintra.net",
       "path": "/realms/ASOC-DEV/",
       "expires": -1,
@@ -52,20 +52,20 @@
     },
     {
       "name": "KEYCLOAK_SESSION",
-      "value": "\"ASOC-DEV/7e05aaba-0c1b-4918-b597-5b68b877683d/ef920f8e-48aa-4a93-8f72-3f1ec9b6d02f\"",
+      "value": "\"ASOC-DEV/7e05aaba-0c1b-4918-b597-5b68b877683d/e359d8a3-8672-4cc3-b8a5-c6dc35f528d9\"",
       "domain": "keycloak.dev-asoc.moscow.alfaintra.net",
       "path": "/realms/ASOC-DEV/",
-      "expires": 1757491348.577817,
+      "expires": 1757522933.718879,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "KEYCLOAK_SESSION_LEGACY",
-      "value": "\"ASOC-DEV/7e05aaba-0c1b-4918-b597-5b68b877683d/ef920f8e-48aa-4a93-8f72-3f1ec9b6d02f\"",
+      "value": "\"ASOC-DEV/7e05aaba-0c1b-4918-b597-5b68b877683d/e359d8a3-8672-4cc3-b8a5-c6dc35f528d9\"",
       "domain": "keycloak.dev-asoc.moscow.alfaintra.net",
       "path": "/realms/ASOC-DEV/",
-      "expires": 1757491348.577833,
+      "expires": 1757522933.718902,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
@@ -76,8 +76,8 @@
       "origin": "https://dev-asoc.moscow.alfaintra.net",
       "localStorage": [
         {
-          "name": "oidc.c7f85c2959834aa7aa6b2f9774e9943d",
-          "value": "{\"id\":\"c7f85c2959834aa7aa6b2f9774e9943d\",\"created\":1757455347,\"request_type\":\"si:r\",\"code_verifier\":\"4ef2d16c2129452da45d17242eb43a389bde57165d51477ab5bd4f0075f4094aa38dac9d8aaa47b78d9ec3b0ee830e10\",\"authority\":\"https://keycloak.dev-asoc.moscow.alfaintra.net/realms/ASOC-DEV\",\"client_id\":\"istio-asoc-front\",\"redirect_uri\":\"https://dev-asoc.moscow.alfaintra.net\",\"scope\":\"openid email profile\",\"extraTokenParams\":{}}"
+          "name": "oidc.a87007beee8f4050809cec4ff2836a09",
+          "value": "{\"id\":\"a87007beee8f4050809cec4ff2836a09\",\"created\":1757486932,\"request_type\":\"si:r\",\"code_verifier\":\"20c80c3231074f7382070d824c3b6cb5dddbda3621c54f59972b32e31ee6b622df715701b6a64c28ba9bf511fc85aeda\",\"authority\":\"https://keycloak.dev-asoc.moscow.alfaintra.net/realms/ASOC-DEV\",\"client_id\":\"istio-asoc-front\",\"redirect_uri\":\"https://dev-asoc.moscow.alfaintra.net\",\"scope\":\"openid email profile\",\"extraTokenParams\":{}}"
         }
       ]
     }

@@ -11,7 +11,7 @@ export abstract class BasePage {
   }
 
   async open() {
-    await this.page.goto(process.env.STAND_URL!);
+    await this.page.goto('/');
 
     await this.page.waitForLoadState('networkidle');
 
