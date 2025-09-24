@@ -11,6 +11,22 @@ interface IssueCardData {
   recommendations: string;
 }
 
+export interface CalculatorOptionData {
+  attackVector: 'Сетевой (N)' | 'Смежный (A)' | 'Локальный (L)' | 'Физический (P)';
+  attackDifficulty: 'Низкая (L)' | 'Высокая (H)';
+  attackRequirements: 'Отсутствуют (N)' | 'Существуют (P)';
+  privilegesRequired: 'Не требуется (N)' | 'Низкий (L)' | 'Высокий (H)';
+  userInteraction: 'Не требуется (N)' | 'Пассивное (P)' | 'Активное (A)';
+
+  confidentialityImpact: 'Высокое (H)' | 'Низкое (L)' | 'Не оказывает (N)';
+  integrityImpact: 'Высокое (H)' | 'Низкое (L)' | 'Не оказывает (N)';
+  availabilityImpact: 'Высокое (H)' | 'Низкое (L)' | 'Не оказывает (N)';
+
+  secondaryConfidentialityImpact: 'Высокое (H)' | 'Низкое (L)' | 'Не оказывает (N)';
+  secondaryIntegrityImpact: 'Высокое (H)' | 'Низкое (L)' | 'Не оказывает (N)';
+  secondaryAvailabilityImpact: 'Высокое (H)' | 'Низкое (L)' | 'Не оказывает (N)';
+}
+
 export class IssueCardPage extends BasePage {
   protected PAGE_URL = '#/issues/create';
   protected TITLE = 'Уязвимости';
@@ -43,8 +59,94 @@ export class IssueCardPage extends BasePage {
     return this.page.getByRole('button', { name: 'Сохранить' });
   }
 
+  get scoreElement(): Locator {
+    return this.page
+      .locator('.complex-action-button_containerL__MT98q')
+      .filter({ hasText: 'оценка' });
+  }
+
+  get scoreValueElement(): Locator {
+    return this.scoreElement.locator('.typography__component_1nsnz');
+  }
+
+  get editScoreButton(): Locator {
+    return this.scoreElement.locator('button');
+  }
+
+  get useCalculatorSwitch(): Locator {
+    return this.page.locator('label').filter({ hasText: 'Использовать калькулятор критичности' });
+  }
+
   get listOptions(): Locator {
     return this.page.locator('[role="option"]');
+  }
+
+  get baseMetricsAccordion(): Locator {
+    return this.page.getByRole('heading', { name: 'Базовые метрики', exact: true });
+  }
+
+  get attackVectorBlock(): Locator {
+    return this.page.locator('.radio-group__component_1b7e3').filter({ hasText: 'Вектор атаки' });
+  }
+
+  get attackDifficultyBlock(): Locator {
+    return this.page
+      .locator('.radio-group__component_1b7e3')
+      .filter({ hasText: 'Сложность атаки' });
+  }
+
+  get attackRequirementsBlock(): Locator {
+    return this.page
+      .locator('.radio-group__component_1b7e3')
+      .filter({ hasText: 'Требования к атаке' });
+  }
+
+  get privilegesRequiredBlock(): Locator {
+    return this.page
+      .locator('.radio-group__component_1b7e3')
+      .filter({ hasText: 'Уровень привилегий' });
+  }
+
+  get userInteractionBlock(): Locator {
+    return this.page
+      .locator('.radio-group__component_1b7e3')
+      .filter({ hasText: 'Взаимодействие с пользователем' });
+  }
+
+  get confidentialityImpactBlock(): Locator {
+    return this.page
+      .locator('.radio-group__component_1b7e3')
+      .filter({ hasText: 'Влияние на конфиденциальность' });
+  }
+
+  get integrityImpactBlock(): Locator {
+    return this.page
+      .locator('.radio-group__component_1b7e3')
+      .filter({ hasText: 'Влияние на целостность' });
+  }
+
+  get availabilityImpactBlock(): Locator {
+    return this.page
+      .locator('.radio-group__component_1b7e3')
+      .filter({ hasText: 'Влияние на доступность' });
+  }
+
+  get secondaryConfidentialityImpactBlock(): Locator {
+    return this.page
+      .locator('.radio-group__component_1b7e3')
+      .filter({ hasText: 'Влияние на конфиденциальность (SC)' });
+  }
+
+  get secondaryIntegrityImpactBlock(): Locator {
+    return this.page
+      .locator('.radio-group__component_1b7e3')
+      .filter({ hasText: 'Влияние на целостность (SI)' });
+  }
+
+  get secondaryAvailabilityImpactBlock(): Locator {
+    return this.page
+      .locator('.radio-group__component_1b7e3')
+      .filter({ hasText: 'Влияние на доступность (SA)' });
   }
 
   async fillMainFields(options: IssueCardData) {
@@ -67,6 +169,18 @@ export class IssueCardPage extends BasePage {
     await this.saveButton.click();
   }
 
+  async editScore() {
+    await this.editScoreButton.click();
+  }
+
+  async useCalculator() {
+    await this.useCalculatorSwitch.click();
+  }
+
+  async openBaseMetrics() {
+    await this.baseMetricsAccordion.click();
+  }
+
   buildIssueCardData() {
     return {
       name: `issueName-${Date.now()}`,
@@ -87,5 +201,85 @@ export class IssueCardPage extends BasePage {
     await this.save();
 
     return { ...issueModalData, ...data };
+  }
+
+  async selectCalculatorOptions(o: CalculatorOptionData) {
+    await this.attackVectorBlock
+      .locator('button')
+      .filter({ hasText: o.attackVector })
+      .first()
+      .click();
+
+    await this.attackDifficultyBlock
+      .locator('button')
+      .filter({ hasText: o.attackDifficulty })
+      .first()
+      .click();
+
+    await this.attackRequirementsBlock
+      .locator('button')
+      .filter({ hasText: o.attackRequirements })
+      .first()
+      .click();
+
+    await this.privilegesRequiredBlock
+      .locator('button')
+      .filter({ hasText: o.privilegesRequired })
+      .first()
+      .click();
+
+    await this.userInteractionBlock
+      .locator('button')
+      .filter({ hasText: o.userInteraction })
+      .first()
+      .click();
+
+    await this.confidentialityImpactBlock
+      .locator('button')
+      .filter({ hasText: o.confidentialityImpact })
+      .first()
+      .click();
+
+    await this.integrityImpactBlock
+      .locator('button')
+      .filter({ hasText: o.integrityImpact })
+      .first()
+      .click();
+
+    await this.availabilityImpactBlock
+      .locator('button')
+      .filter({ hasText: o.availabilityImpact })
+      .first()
+      .click();
+
+    await this.secondaryConfidentialityImpactBlock
+      .locator('button')
+      .filter({ hasText: o.secondaryConfidentialityImpact })
+      .first()
+      .click();
+
+    await this.secondaryIntegrityImpactBlock
+      .locator('button')
+      .filter({ hasText: o.secondaryIntegrityImpact })
+      .first()
+      .click();
+
+    await this.secondaryAvailabilityImpactBlock
+      .locator('button')
+      .filter({ hasText: o.secondaryAvailabilityImpact })
+      .first()
+      .click();
+  }
+
+  async calculateScore(calculatorOptions: CalculatorOptionData) {
+    await this.editScore();
+
+    await this.useCalculator();
+
+    await this.openBaseMetrics();
+
+    await this.selectCalculatorOptions(calculatorOptions);
+
+    await this.save();
   }
 }

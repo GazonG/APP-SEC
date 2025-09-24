@@ -15,8 +15,4 @@ export abstract class BasePage {
     await this.page.goto(this.PAGE_URL);
     await this.title.waitFor({ state: 'visible' });
   }
-
-  // protected async waitForOwnTitle() {
-  //   await this.title.waitFor({ state: 'visible' });
-  // }
 }
