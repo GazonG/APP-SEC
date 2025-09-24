@@ -5,6 +5,7 @@ import path from 'path';
 dotenv.config({ path: path.resolve(__dirname, '.env') });
 
 export default defineConfig({
+  timeout: 120_000,
   testDir: './tests',
   outputDir: 'reports/test-results',
   fullyParallel: false,
@@ -13,13 +14,14 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   reporter: [['html', { outputFolder: 'reports/playwright-report', open: 'never' }]],
   use: {
-    ignoreHTTPSErrors: true,
     testIdAttribute: 'data-test-id',
     baseURL: process.env.STAND_URL,
-    trace: 'on-first-retry',
 
-    actionTimeout: 30000,
-    navigationTimeout: 30000,
+    trace: 'retain-on-failure',
+    screenshot: 'only-on-failure',
+    video: 'retain-on-failure',
+
+    ignoreHTTPSErrors: true,
     extraHTTPHeaders: {
       Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
     },

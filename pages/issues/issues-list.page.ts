@@ -2,7 +2,7 @@ import { Locator } from '@playwright/test';
 import { BasePage } from '../base.page';
 import { ArtifactCardPage } from '../artifacts/artifact-card.page';
 
-interface IssueData {
+export interface IssueModalData {
   type: string;
   active: string;
 }
@@ -19,7 +19,7 @@ export class IssuesListPage extends BasePage {
     return this.page.getByLabel('тип уязвимости');
   }
 
-  get activeList(): Locator {
+  get activeCombobox(): Locator {
     return this.page.getByRole('textbox', { name: 'актив' });
   }
 
@@ -35,11 +35,11 @@ export class IssuesListPage extends BasePage {
     await this.addButton.click();
   }
 
-  async fillMainFields(options: IssueData) {
+  async fillMainFields(options: IssueModalData) {
     await this.typeList.click();
     await this.listOptions.filter({ hasText: options.type }).click();
 
-    await this.activeList.click();
+    await this.activeCombobox.fill(options.active);
     await this.listOptions.filter({ hasText: options.active }).click();
   }
 
@@ -47,12 +47,19 @@ export class IssuesListPage extends BasePage {
     await this.saveButton.click();
   }
 
-  async initializeIssueCreationFromModal(issueData?: IssueData) {
-    await this.open();
-
+  async buildIssueModalData() {
     const artifact = await new ArtifactCardPage(this.page).createArtifact();
-    const data: IssueData = issueData ?? { type: 'SCA', active: artifact.name };
 
+    return {
+      type: 'SCA',
+      active: artifact.name,
+    };
+  }
+
+  async initializeIssueCreationFromModal(issueData?: IssueModalData) {
+    const data: IssueModalData = issueData ?? (await this.buildIssueModalData());
+
+    await this.open();
     await this.add();
     await this.fillMainFields(data);
     await this.save();

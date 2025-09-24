@@ -13,5 +13,10 @@ export abstract class BasePage {
   async open() {
     await this.page.goto('/', { waitUntil: 'networkidle' });
     await this.page.goto(this.PAGE_URL);
+    await this.title.waitFor({ state: 'visible' });
   }
+
+  // protected async waitForOwnTitle() {
+  //   await this.title.waitFor({ state: 'visible' });
+  // }
 }
