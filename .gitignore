@@ -3,6 +3,5 @@ results/
 blob-report/
 playwright/.cache/
 .env
-reports/playwright-report
-reports/test-results
+reports/
 .auth/
