@@ -12,11 +12,8 @@ test.describe('Карточка артефакта', () => {
   });
 
   test('Создание артефакта', async ({ page }) => {
-    // await artifactListPage.open();
-    await artifactCardPage.open();
+    const artifact = await artifactCardPage.createArtifact();
 
-    // await page.waitForTimeout(2000);
-
-    await expect(artifactCardPage.title).toBeVisible();
+    await expect(page.getByText(artifact.name).first()).toBeVisible();
   });
 });

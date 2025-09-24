@@ -11,10 +11,7 @@ export abstract class BasePage {
   }
 
   async open() {
-    await this.page.goto('/');
-
-    await this.page.waitForLoadState('networkidle');
-
+    await this.page.goto('/', { waitUntil: 'networkidle' });
     await this.page.goto(this.PAGE_URL);
   }
 }
