@@ -150,6 +150,10 @@ export class IssueCardPage extends BasePage {
       .filter({ hasText: 'Влияние на доступность (SA)' });
   }
 
+  get vectorElement(): Locator {
+    return this.page.locator('span:has-text("CVSS:")');
+  }
+
   async fillMainFields(options: IssueCardData) {
     await this.nameInput.fill(options.name);
 
@@ -191,28 +195,6 @@ export class IssueCardPage extends BasePage {
       description: 'description',
       recommendations: 'recommendations',
     };
-  }
-
-  // async createIssue(issueModalData?: IssueModalData, issueCardData?: IssueCardData) {
-  //   const issuesList = new IssuesListPage(this.page);
-  //   const data: IssueCardData = issueCardData ?? this.buildIssueCardData();
-
-  //   await issuesList.initializeIssueCreationFromModal(issueModalData);
-  //   await this.fillMainFields(data);
-  //   await this.save();
-
-  //   return { ...issueModalData, ...data };
-  // }
-
-  async createIssue(issueCardData?: IssueCardData) {
-    const artifactCard = new ArtifactCardPage(this.page);
-    const data: IssueCardData = issueCardData ?? this.buildIssueCardData();
-
-    const issueModalData = await artifactCard.initializeIssueCreationFromModal();
-    await this.fillMainFields(data);
-    await this.save();
-
-    return { ...issueModalData, ...data };
   }
 
   async selectCalculatorOptions(o: CalculatorOptionData) {
