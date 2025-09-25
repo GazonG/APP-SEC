@@ -1,5 +1,7 @@
 import { Locator } from '@playwright/test';
 import { BasePage } from '../base.page';
+import { IssueModalData } from '../issues/issues-list.page';
+import { IssueCardData, IssueCardPage } from '../issues/issues-card.page';
 
 interface ArtifactData {
   name: string;
@@ -37,6 +39,14 @@ export class ArtifactCardPage extends BasePage {
     return this.page.getByRole('button', { name: 'Сохранить' });
   }
 
+  get addButton(): Locator {
+    return this.page.locator('svg path[d="M11 11H5v2h6v6h2v-6h6v-2h-6V5h-2v6z"]');
+  }
+
+  get issuesTabButton(): Locator {
+    return this.page.getByTestId('issues-tab-toggle');
+  }
+
   async fillCardFields(options: ArtifactData) {
     await this.nameInput.fill(options.name);
 
@@ -51,6 +61,14 @@ export class ArtifactCardPage extends BasePage {
     await this.saveButton.click();
   }
 
+  async add() {
+    await this.addButton.click();
+  }
+
+  async openIssuesTab() {
+    await this.issuesTabButton.click();
+  }
+
   async createArtifact(data: ArtifactData = this.artifactData) {
     await this.open();
 
@@ -59,5 +77,28 @@ export class ArtifactCardPage extends BasePage {
     await this.save();
 
     return data;
+  }
+
+  async initializeIssueCreationFromModal(): Promise<IssueModalData> {
+    const artifact = await this.createArtifact();
+
+    await this.openIssuesTab();
+
+    await this.add();
+
+    await this.save();
+
+    return { type: 'SCA', active: artifact.name };
+  }
+
+  async createIssue(issueCardData?: IssueCardData) {
+    const issuesCard = new IssueCardPage(this.page);
+    const data: IssueCardData = issueCardData ?? issuesCard.buildIssueCardData();
+
+    const issueModalData = await this.initializeIssueCreationFromModal();
+    await issuesCard.fillMainFields(data);
+    await issuesCard.save();
+
+    return { ...issueModalData, ...data };
   }
 }

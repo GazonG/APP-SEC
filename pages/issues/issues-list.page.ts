@@ -1,6 +1,7 @@
 import { Locator } from '@playwright/test';
 import { BasePage } from '../base.page';
 import { ArtifactCardPage } from '../artifacts/artifact-card.page';
+import { IssueCardData, IssueCardPage } from './issues-card.page';
 
 export interface IssueModalData {
   type: string;
@@ -65,5 +66,16 @@ export class IssuesListPage extends BasePage {
     await this.save();
 
     return data;
+  }
+
+  async createIssue(issueModalData?: IssueModalData, issueCardData?: IssueCardData) {
+    const issuesCard = new IssueCardPage(this.page);
+    const data: IssueCardData = issueCardData ?? issuesCard.buildIssueCardData();
+
+    await this.initializeIssueCreationFromModal(issueModalData);
+    await issuesCard.fillMainFields(data);
+    await issuesCard.save();
+
+    return { ...issueModalData, ...data };
   }
 }

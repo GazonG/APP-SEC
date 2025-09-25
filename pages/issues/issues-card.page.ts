@@ -1,8 +1,9 @@
 import { Locator } from '@playwright/test';
 import { BasePage } from '../base.page';
 import { IssueModalData, IssuesListPage } from './issues-list.page';
+import { ArtifactCardPage } from '../artifacts/artifact-card.page';
 
-interface IssueCardData {
+export interface IssueCardData {
   name: string;
   scanner: string;
   criticalLevel: string;
@@ -192,11 +193,22 @@ export class IssueCardPage extends BasePage {
     };
   }
 
-  async createIssue(issueModalData?: IssueModalData, issueCardData?: IssueCardData) {
-    const issuesList = new IssuesListPage(this.page);
+  // async createIssue(issueModalData?: IssueModalData, issueCardData?: IssueCardData) {
+  //   const issuesList = new IssuesListPage(this.page);
+  //   const data: IssueCardData = issueCardData ?? this.buildIssueCardData();
+
+  //   await issuesList.initializeIssueCreationFromModal(issueModalData);
+  //   await this.fillMainFields(data);
+  //   await this.save();
+
+  //   return { ...issueModalData, ...data };
+  // }
+
+  async createIssue(issueCardData?: IssueCardData) {
+    const artifactCard = new ArtifactCardPage(this.page);
     const data: IssueCardData = issueCardData ?? this.buildIssueCardData();
 
-    await issuesList.initializeIssueCreationFromModal(issueModalData);
+    const issueModalData = await artifactCard.initializeIssueCreationFromModal();
     await this.fillMainFields(data);
     await this.save();
 
